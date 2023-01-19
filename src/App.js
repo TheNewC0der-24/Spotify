@@ -1,9 +1,15 @@
 import './App.css';
 
+import Header from './Components/Header/Header';
+import Filters from './Components/Filters/Filters';
+import GridView from './Components/GridView/GridView';
+
 function App() {
   return (
     <>
-      <h1>Hello World!</h1>
+      <Header />
+      <Filters />
+      <GridView />
     </>
   );
 }
