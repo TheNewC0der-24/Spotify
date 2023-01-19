@@ -11,7 +11,7 @@ import {
 const GridView = () => {
     return (
         <>
-            <Container maxWidth='lg' sx={{ marginTop: "7rem" }}>
+            <Container maxWidth='lg'>
                 <Grid container spacing={2}>
                     <Grid item xs={12} sm={6} md={4} lg={4}>
                         <Card sx={{ bgcolor: "#f5f5f5", height: "100%" }}>
