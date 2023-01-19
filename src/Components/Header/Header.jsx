@@ -12,6 +12,8 @@ import {
 
 import SearchIcon from '@mui/icons-material/Search';
 
+import logo from '../../assets/logo.svg'
+
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -58,8 +60,11 @@ const Header = () => {
     return (
         <>
             <Box sx={{ flexGrow: 1, marginBottom: "4.5rem" }}>
-                <AppBar component="nav" position="fixed">
+                <AppBar sx={{ backgroundColor: "#000" }} component="nav" position="fixed">
                     <Toolbar>
+                        <Box p={1}>
+                            <img src={logo} width={40} alt="logo" />
+                        </Box>
                         <Typography
                             variant="h6"
                             noWrap
