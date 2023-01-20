@@ -8,6 +8,8 @@ import {
     Toolbar,
     Typography,
     InputBase,
+    TextField,
+    Button
 } from '@mui/material';
 
 import SearchIcon from '@mui/icons-material/Search';
@@ -57,6 +59,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const Header = () => {
+
+    const color = '#00d65f';
+
     return (
         <>
             <Box sx={{ flexGrow: 1, marginBottom: "4.5rem" }}>
@@ -72,15 +77,41 @@ const Header = () => {
                         >
                             Spotify Music Player
                         </Typography>
-                        <Search>
-                            <SearchIconWrapper>
-                                <SearchIcon />
-                            </SearchIconWrapper>
-                            <StyledInputBase
-                                placeholder="Search…"
-                                inputProps={{ 'aria-label': 'search' }}
-                            />
-                        </Search>
+                        <TextField
+                            size='small'
+                            sx={{
+                                "& .MuiOutlinedInput-root": {
+                                    "&.Mui-focused fieldset": { borderColor: color },
+                                },
+                                "& .MuiFormLabel-root.Mui-focused": {
+                                    color: color,
+                                },
+                                "&.MuiInputBase-root": {
+                                    color: color,
+                                },
+                                "& .MuiInputBase-input": {
+                                    color: color,
+                                }
+                            }}
+                            focused
+                            placeholder="Search..."
+                            variant="outlined"
+                        />
+                        <Button
+                            variant="contained"
+                            sx={{
+                                "&.MuiButton-root": {
+                                    backgroundColor: color,
+                                    color: "#000",
+                                    "&:hover": {
+                                        backgroundColor: color,
+                                        color: "#000"
+                                    }
+                                },
+                                marginLeft: "0.5rem"
+                            }}
+                        >Search
+                        </Button>
                     </Toolbar>
                 </AppBar>
             </Box>
