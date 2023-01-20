@@ -1,15 +1,11 @@
 import './App.css';
 
-import Header from './Components/Header/Header';
-import Filters from './Components/Filters/Filters';
-import GridView from './Components/GridView/GridView';
+import Login from './Components/Login/Login';
 
 function App() {
   return (
     <>
-      <Header />
-      <Filters />
-      <GridView />
+      <Login />
     </>
   );
 }
