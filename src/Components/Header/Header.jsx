@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import {
     AppBar,
@@ -6,7 +6,6 @@ import {
     Toolbar,
     Typography,
     TextField,
-    IconButton,
     Button
 } from '@mui/material';
 
@@ -16,16 +15,6 @@ import Logout from './Logout/Logout';
 const Header = ({ handleLogout }) => {
 
     const color = '#00d65f';
-
-    const [anchorEl, setAnchorEl] = useState(null);
-
-    const handleMenu = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
 
     return (
         <>
