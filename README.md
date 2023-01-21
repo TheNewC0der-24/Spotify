@@ -8,6 +8,7 @@ Spotify is a proprietary Swedish audio streaming and media services provider fou
 * Data is displayed in Grid View.
 * You can filter the data by its popularity.
 * You can search track by artist name.
+* Redux is used for state management.
 
 > **ONLY ROCK GENRE IS DISPLAYED.**
 
