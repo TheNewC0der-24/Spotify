@@ -14,7 +14,7 @@ const Login = () => {
     const color = '#00d65f';
 
     const CLIENT_ID = "153d87f5720d4b3c8b119b19c89af9b9";
-    const REDIRECT_URI = "http://localhost:3000";
+    const REDIRECT_URI = "https://spotify-music-player-delta.vercel.app";
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
     const RESPONSE_TYPE = "token";
 
