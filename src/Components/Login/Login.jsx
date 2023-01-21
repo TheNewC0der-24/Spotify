@@ -7,8 +7,6 @@ import {
     Typography,
 } from '@mui/material';
 
-import Header from '../Header/Header';
-import Filters from '../Filters/Filters';
 import GridView from '../GridView/GridView';
 
 const Login = () => {
@@ -33,7 +31,7 @@ const Login = () => {
             token = hash.substring(1).split("&").find(elem => elem.startsWith("access_token")).split("=")[1];
 
             window.location.hash = "";
-
+            console.log(token, "set token")
             // Save the token in the local storage
             window.localStorage.setItem("token", token);
 
@@ -86,9 +84,7 @@ const Login = () => {
                     </Container>
                 ) : (
                     <div>
-                        <Header handleLogout={handleLogout} />
-                        <Filters />
-                        <GridView />
+                        <GridView handleLogout={handleLogout} />
                     </div>
                 )
             }
