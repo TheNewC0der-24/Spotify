@@ -6,13 +6,12 @@ import {
     Toolbar,
     Typography,
     TextField,
-    Button
 } from '@mui/material';
 
 import logo from '../../assets/logo.svg'
 import Logout from './Logout/Logout';
 
-const Header = ({ handleLogout }) => {
+const Header = ({ handleLogout, data, handleChange }) => {
 
     const color = '#00d65f';
 
@@ -27,13 +26,16 @@ const Header = ({ handleLogout }) => {
                         <Typography
                             variant="h6"
                             noWrap
-                            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'none', md: "block" } }}
                         >
                             Spotify Music Player
                         </Typography>
                         <TextField
                             size='small'
                             sx={{
+                                width: {
+                                    xs: "100%", sm: "100%", md: "50%", lg: "25%"
+                                },
                                 "& .MuiOutlinedInput-root": {
                                     "&.Mui-focused fieldset": { borderColor: color },
                                 },
@@ -48,26 +50,14 @@ const Header = ({ handleLogout }) => {
                                 }
                             }}
                             focused
-                            placeholder="Search..."
+                            placeholder="Search track by artist name"
                             variant="outlined"
+                            value={data}
+                            onChange={(e) => handleChange(e)}
                         />
-                        <Button
-                            variant="contained"
-                            sx={{
-                                "&.MuiButton-root": {
-                                    backgroundColor: color,
-                                    color: "#000",
-                                    "&:hover": {
-                                        backgroundColor: color,
-                                        color: "#000"
-                                    }
-                                },
-                                marginLeft: "0.5rem"
-                            }}
-                        >Search
-                        </Button>
-
-                        <Logout handleLogout={handleLogout} />
+                        <Box sx={{ display: "flex", justifyContent: "end" }}>
+                            <Logout handleLogout={handleLogout} />
+                        </Box>
                     </Toolbar>
                 </AppBar>
             </Box>
