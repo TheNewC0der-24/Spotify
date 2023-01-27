@@ -39,6 +39,8 @@ const Login = () => {
             setToken(token);
         }
 
+        setToken(token);
+
     }, []);
 
     // http://localhost:3000/#access_token=BQDbN9yAsIwGDDNCv_byDHGkcmJAFjMYLvR2oEJ6CFfHNsqzKac322HIb8HMRi51qZ4lXQJfqoCMxh6Yse_x3477iuYuAcQNWVDalF2qq3qWCdeRhME9bBSsSyLQU05uP56C6k8-wcAZCYYN5B41bq6lCtRHhWJeh9t7bj2KQoSuB3Ea7I2GbGheFe2fFNA&token_type=Bearer&expires_in=3600
